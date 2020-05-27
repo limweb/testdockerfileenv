@@ -18,8 +18,8 @@ LABEL vendor=ACME\
 COPY ./.env /var/www/html
 COPY ./.env /tmp
 COPY ./docker-entrypoint.sh /usr/local/bin/
-
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN  touch /tmp/aaa.txt
+RUN  chmod +x /usr/local/bin/docker-entrypoint.sh
 
 COPY docker-entrypoint.sh /tmp
 
