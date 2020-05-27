@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: yourstage
     container_name: servicname
     working_dir: /var/www/html
     restart: "no"
