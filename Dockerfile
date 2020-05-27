@@ -12,5 +12,5 @@ COPY ./.env /var/www/html
 COPY ./.env /tmp
 COPY docker-entrypoint.sh /usr/local/bin/
 COPY docker-entrypoint.sh /tmp
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["spleep","1d"]
