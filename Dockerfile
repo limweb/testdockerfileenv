@@ -3,6 +3,7 @@ ARG TEST_ENV=something
 FROM ubuntu:latest
 ARG TEST_ENV
 ENV TEST_ENV=$TEST_ENV
+echo $TEST_ENV
 WORKDIR /var/www/html
 USER root
 # RUN mkdir /var/www
