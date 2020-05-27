@@ -24,4 +24,5 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 COPY docker-entrypoint.sh /tmp
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["cat ./.env"]
 CMD ["spleep","1d"]
