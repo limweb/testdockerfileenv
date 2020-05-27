@@ -10,8 +10,10 @@ USER root
 # RUN whoami
 COPY ./.env /var/www/html
 COPY ./.env /tmp
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+COPY ./docker-entrypoint.sh /usr/local/bin/
+# RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 COPY docker-entrypoint.sh /tmp
+
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["spleep","1d"]
