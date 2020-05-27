@@ -9,12 +9,11 @@ USER root
 # RUN mkdir /var/www/html
 # RUN whoami
 LABEL vendor=ACME\
-      com.example.is-beta= \
-      com.example.is-production="" \
-      com.example.version="0.0.1-beta" \
-      com.example.release-date="2015-02-1" \
-      com.example.test-env="$TEST_ENV" 
-
+      com.vuevm.com.is-beta= \
+      com.vuevm.com.is-production="" \
+      com.vuevm.com.version="0.0.1-beta" \
+      com.vuevm.com.release-date="2015-02-1" \
+      com.vuevm.com.test-env="$TEST_ENV" 
 COPY ./.env /var/www/html
 COPY ./.env /tmp
 COPY ./docker-entrypoint.sh /usr/local/bin/
