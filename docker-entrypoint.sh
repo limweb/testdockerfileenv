@@ -1,5 +1,5 @@
 #!/bin/sh
 echo 'test env'
 echo $TEST_ENV
-sed 's/$TEST_ENV/${TEST_END}/g;' /var/www/html/.env >  /var/www/html/.env
-sleep 1d
+sed -i 's/$TEST_ENV/'"$TEST_ENV"'/g' /var/www/html/.env
+exec "$@"
