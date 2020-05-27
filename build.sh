@@ -1,3 +1,4 @@
+#!/bin/sh
 chmod +x docker-entrypoint.sh
 docker build -t myimage --build-arg TEST_ENV="test"  .
 docker run -d myimage sleep 1d
