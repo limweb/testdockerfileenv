@@ -23,5 +23,5 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 COPY docker-entrypoint.sh /tmp
 
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh > /tmp/aaa.txt"]
 CMD ["sleep","1d"]
