@@ -1,20 +1,18 @@
 #  docker-compose -f docker-compose.yml config check validate config
 version: "3.7"
 services:
-  servicname:
+  mytest:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: servicname
+    container_name: mytest
     working_dir: /var/www/html
     restart: "no"
     ports:
       - "8101:8101"
     expose:
       - "8101"
-    volumes:
-      - :/var/www/html
     labels:
-      com.docker.compose.project: "servicname"
+      com.docker.compose.project: "mytest"
     environment:
-      TEST_ENV: "servicname.local.com"
+      TEST_ENV: "mytest.local.com"
